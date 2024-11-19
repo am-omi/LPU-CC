@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://collegetour.in/admissions/university-images/lpu-logo.png" type="image/x-icon">
+    <title>Reports</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+       
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 45px;
+        }
+
+        .logo p {
+            margin-left: 10px;
+            color: antiquewhite;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: crimson;
+        }
+
+       
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reports-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .report-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            border-left: 5px solid #0073e6;
+            transition: transform 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .report-card:hover {
+            transform: scale(1.02);
+        }
+
+        .report-card h2 {
+            color: #0073e6;
+            margin-bottom: 10px;
+        }
+
+        .report-card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .report-card p strong {
+            font-weight: 600;
+        }
+
+       
+        .issue-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://collegetour.in/admissions/university-images/lpu-logo.png" alt="LPU Logo">
+            <p>LPU-CC</p>
+        </div>
+        <ul class="menu">
+            <li><a href="/index.html"><b>Home</b></a></li>
+            <li><a href="/report.html"><b>Report an Issue</b></a></li>
+            <li><a href="reports.html"><b>Top Contributors</b></a></li>
+            <li><a href="/about.html"><b>About Us</b></a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>Reports Submitted by Students</h1>
+        <div class="reports-container" id="reportsContainer">
+           
+        </div>
+    </main>
+
+    <script>
+        
+        const reports = [
+            {
+                id: 1,
+                name: "Al Amin Mahmud Omi",
+                lpuId: "12405377",
+                issueDetails: "Dead trees found.",
+                location: "Robo Park",
+                date: "2024-11-07",
+                imageUrl: "#"
+            },
+            {
+                id: 2,
+                name: "Savio Tito",
+                lpuId: "10400053",
+                issueDetails: "Overflowing trash bins found.",
+                location: "Food court beside Computing block",
+                date: "2024-11-06",
+                imageUrl: "https://via.placeholder.com/400?text=Issue+Image+2"
+            },
+            
+        ];
+
+        
+        function renderReports() {
+            const reportsContainer = document.getElementById('reportsContainer');
+            reportsContainer.innerHTML = '';  
+
+            reports.forEach(report => {
+                const reportCard = document.createElement('div');
+                reportCard.classList.add('report-card');
+
+                reportCard.innerHTML = `
+                    <h2>Report #${report.id}</h2>
+                    <p><strong>Name:</strong> ${report.name}</p>
+                    <p><strong>LPU ID:</strong> ${report.lpuId}</p>
+                    <p><strong>Issue Details:</strong> ${report.issueDetails}</p>
+                    <p><strong>Location:</strong> ${report.location}</p>
+                    <p><strong>Submitted Date:</strong> ${report.date}</p>
+                    <img src="${report.imageUrl}" alt="Issue Image for Report #${report.id}" class="issue-image">
+                `;
+
+                reportsContainer.appendChild(reportCard);
+            });
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', renderReports);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://collegetour.in/admissions/university-images/lpu-logo.png" type="image/x-icon" >
+    <title>LPU-CC | Report Issues</title>
+    <link rel="stylesheet" href="source/css/report.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://collegetour.in/admissions/university-images/lpu-logo.png" alt="LPU Logo" height="50" width="45">
+                <p>LPU-CC</p>
+            </div>
+            <ul class="menu">
+                <li><a href="/index.html"><b>Home</b> |</a></li>
+                <!-- <li><a href="/report.html"><b>Report an Issue</b>    |</a></li> -->
+                <li><a href="reports.html"><b>Reports</b>    |</a></li>
+                <li><a href="top_contributors.html"><b>Top Contributors</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Choose a Section to Report</h1>
+        <div class="grid">
+            <a href="https://forms.gle/Stvn4RRE92VHKW699" class="block">
+                <div class="block-content">
+                    <h2>In Block</h2>
+                </div>
+            </a>
+            <a href="https://forms.gle/jzdCPjfqGkg6TvZXA" class="block">
+                <div class="block-content">
+                    <h2>In Campus</h2>
+                </div>
+            </a>
+            <a href="https://forms.gle/njFshGK5Z8b7mBQX8" class="block">
+                <div class="block-content">
+                    <h2>In Hostel</h2>
+                </div>
+            </a>
+            <a href="https://forms.gle/mh4vfJiK6AVdBYpD6" class="block">
+                <div class="block-content">
+                    <h2>Food Review</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+    <script>
+        
+        document.querySelectorAll('.grid a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                
+                event.preventDefault();
+                
+             
+                if (confirm("Are you sure you want to proceed to the Google Form?")) {
+                   
+                    window.location.href = this.href;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: whitesmoke;
+}
+
+header {
+    background-color: #000000;
+    padding: 10px 0;
+    color: white;
+    border-radius: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 2200px;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    flex: 5;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo p {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 10px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.menu a b:hover {
+    color: crimson;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

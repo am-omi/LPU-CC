@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://collegetour.in/admissions/university-images/lpu-logo.png" type="image/x-icon">
+    <title>Top Contributions</title>
+    <link rel="stylesheet" href="top_contributors.html"
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://collegetour.in/admissions/university-images/lpu-logo.png" alt="LPU Logo">
+            <p>LPU-CC</p>
+        </div>
+        <ul class="menu">
+            <li><a href="/index.html"><b>Home</b></a></li>
+            <li><a href="/report.html"><b>Report an Issue</b></a></li>
+            <li><a href="reports.html"><b>Reports</b></a></li>
+            <li><a href="/about.html"><b>About Us</b></a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>Top Contributors of the Month</h1>
+        <div class="contributions-container" id="contributionsContainer">
+           
+        </div>
+    </main>
+
+    <script>
+        // Sample data for top contributors
+        const contributors = [
+            {
+                id: 1,
+                name: "Sachin Kumar Chawla",
+                contributions: 10,
+                description: "Consistently reports infrastructure issues around campus, ensuring a safer and cleaner environment for all.",
+            },
+            {
+                id: 2,
+                name: "Savio Tito",
+                contributions: 8,
+                description: "Actively identifies and reports faulty equipment in labs and classrooms, helping to maintain a conducive learning environment.",
+            },
+            {
+                id: 3,
+                name: "Anubhav Tripati",
+                contributions: 5,
+                description: "Notably reported issues in the dormitories and dining areas, improving the quality of campus facilities.",
+            },
+            
+        ];
+
+        
+        function renderContributors() {
+            const contributionsContainer = document.getElementById('contributionsContainer');
+            contributionsContainer.innerHTML = '';  // Clear any existing contributors
+
+            contributors.forEach(contributor => {
+                const contributorCard = document.createElement('div');
+                contributorCard.classList.add('contributor-card');
+
+                contributorCard.innerHTML = `
+                    <h2>${contributor.name}</h2>
+                    <p><strong>Contributions:</strong> ${contributor.contributions}</p>
+                    <p><strong>About:</strong> ${contributor.description}</p>
+                `;
+
+                contributionsContainer.appendChild(contributorCard);
+            });
+        }
+
+     
+        document.addEventListener('DOMContentLoaded', renderContributors);
+    </script>
+
+</body>
+</html>
